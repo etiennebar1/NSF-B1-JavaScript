@@ -12,5 +12,6 @@ for(let i = -1722 ; i <= 2756 ; i++){
 
 
 message += '</ul>';
-alert('ok');
+console.log('ok');
 document.write(message);
+
