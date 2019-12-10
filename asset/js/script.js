@@ -1,0 +1,1 @@
+document.write('Je fais du JS');
