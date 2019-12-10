@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>JS</title>
-    <script src="asset/js/functions/isLeapYear.js"></script>
+    <script src="asset/js/functions/calculerVolumeCylindre.js"></script>
 </head>
 <body>
 
@@ -14,14 +14,13 @@
     <script type="text/javascript" src="asset/js/script.js"></script>
 
     <script>
-        let reponse = prompt('Quelle année ?');
+        let rayon = prompt('Rayon ?');
+        let hauteur = prompt('Hauteur ?');
 
-        if (isLeapYear(reponse)){
-            alert('Wesh');
-        }
-        else {
-            alert('Not wesh');
-        }
+        let resultat = calculerVolumeCylindre(rayon, hauteur);
+
+        if (resultat) alert(resultat);
+        else alert('Paie ta tournée');
     </script>
 
 </body>
