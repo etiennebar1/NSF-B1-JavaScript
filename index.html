@@ -41,12 +41,21 @@
 <form>
     <input type="color" name="color" id="color" placeholder="couleur">
     <button onclick="convertirDecimal()">Appuyez !</button>
-    <script>
-        function convertirDecimal(){
-        let color = document.getElementById('color').value;
-        alert(color);
-        }
-    </script>
+
 </form>
+<script>
+    function convertirDecimal() {
+        let couleurHexa = document.getElementById('color').value;
+        couleurHexa = couleurHexa.slice(1,7);
+        let couleurHexaRed = parseInt(couleurHexa.slice(0,2), 16);
+        let couleurHexaGreen = parseInt(couleurHexa.slice(2,4), 16);
+        let couleurHexaBlue = parseInt(couleurHexa.slice(4,6), 16);
+        alert(couleurHexaRed + "|" + couleurHexaGreen + "|" + couleurHexaBlue);
+    }
+
+
+
+</script>
+
 </body>
 </html>
