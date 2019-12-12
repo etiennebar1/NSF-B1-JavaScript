@@ -7,20 +7,46 @@
 </head>
 <body>
 
-    <script type="text/javascript">var macouleur="blue"</script>
-    <script src="asset/js/pluie.js" type="text/javascript"></script>
 
+<script>
+    class Voiture {
+        constructor(masse, vitesse, couleur, marque, modele, volumeReservoir) {
+            this.masse = masse;
+            this.vitesse = vitesse;
+            this.couleur = couleur;
+            this.marque = marque;
+            this.modele = modele;
+            this.volumeReservoir = volumeReservoir;
+        }
+
+        calculerEnergieCinetique() {
+            return 0.5 * this.masse * Math.pow(this.vitesse, 2);
+        }
+        calculerMasseConsommation (consommation){
+            return this.masse = this.masse - 0.755 * consommation;
+        }
+    }
+
+
+    let voiture1 = new Voiture(1000, 0, 'rouge', 'Simca', '1000', 45);
+    let voiture2 = new Voiture(800, 0, 'noir', 'Renault', 'Clio', 30);
+
+    voiture1.vitesse = 50;
+    console.log(voiture1.calculerEnergieCinetique());
+
+    console.log(voiture1.masse);
+    voiture1.calculerMasseConsommation(15);
+    console.log(voiture1.masse);
+</script>
+<form>
+    <input type="color" name="color" id="color" placeholder="couleur">
+    <button onclick="convertirDecimal()">Appuyez !</button>
     <script>
-        let coincoin = new Object();
-        // let coincoin = {};
-
-        coincoin.couleur = 'verte';
-        coincoin.taille = 152;
-        coincoin.clafoutis = 'cerise';
-        coincoin.objet = new Object();
-        coincoin.objet.diametre = 120;
-
-        alert(coincoin.couleur);
+        function convertirDecimal(){
+        let color = document.getElementById('color').value;
+        alert(color);
+        }
     </script>
+</form>
 </body>
 </html>
